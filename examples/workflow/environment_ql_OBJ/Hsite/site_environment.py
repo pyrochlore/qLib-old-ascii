@@ -1,4 +1,4 @@
-# ENV_LEVEL_VAR = "yeah"
+# ENV_VAR_ORDER sets the display order of variables on the node
 
 ENV_VAR_ORDER = [
         "JOB",
@@ -9,6 +9,11 @@ ENV_VAR_ORDER = [
         "YRES",
         "PIXEL_ASPECT",
         ]
+
+# JOB directory is the one that this scripts is in
+if "/Scene/" in HIP:
+    p = HIP.split('/')
+    JOB = "/".join(p[:p.index("Scene")])
 
 # Scan scene OTLs under the $JOB/Asset directory
 OTL_PATTERN = JOB + "/Asset/*/Houdini/*.otl"
@@ -30,11 +35,11 @@ else:
         SCENE_NAME = SCENE_NAME[:-4]
     SCENE = HIP
 
-# Camera defaults
-XRES = 1280
-YRES = 720
-PIXEL_ASPECT = 1
-HAPERTURE = 24.9
-
 # Scene defaults
 FPS = 25
+
+# Camera defaults
+XRES = 1920
+YRES = 1080
+PIXEL_ASPECT = 1
+HAPERTURE = 23.8

@@ -22,4 +22,4 @@ examples/backup
 examples/images/*
 examples/*.log
 examples/tmp*
-examples/*/*
+#examples/*/*
