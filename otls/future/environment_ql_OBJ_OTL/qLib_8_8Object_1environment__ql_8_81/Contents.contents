@@ -1,5 +1,6 @@
 node_type
 environment_ql1.init
 environment_ql1.def
+environment_ql1.spareparmdef
 environment_ql1.userdata
 environment_ql1.net

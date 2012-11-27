@@ -1,4 +1,4 @@
-# Dialog script for qLib::environment_ql::1 automatically generated 11/11/12 12:17:58
+# Dialog script for qLib::environment_ql::1 automatically generated 11/27/12 09:34:16
 
 {
     name	qLib::environment_ql::1
@@ -86,18 +86,10 @@
 	    export	none
 	}
 	parm {
-	    name	"job_file_name"
-	    label	"Job Env File Name"
+	    name	"env_file_pattern"
+	    label	"Env File Pattern"
 	    type	string
-	    default	{ "job_environment.py" }
-	    range	{ 0 1 }
-	    export	none
-	}
-	parm {
-	    name	"local_file_name"
-	    label	"Local Env File Name"
-	    type	string
-	    default	{ "local_environment.py" }
+	    default	{ "*_env.py" }
 	    range	{ 0 1 }
 	    export	none
 	}
