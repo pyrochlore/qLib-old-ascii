@@ -1,4 +1,4 @@
-# Dialog script for qLib::environment_ql::1 automatically generated 11/27/12 09:34:16
+# Dialog script for qLib::environment_ql::1 automatically generated 11/28/12 23:01:44
 
 {
     name	qLib::environment_ql::1
@@ -134,14 +134,6 @@
 	    export	none
 	}
 	parm {
-	    name	"discard_sort_order"
-	    label	"Discard Sort Order"
-	    type	toggle
-	    default	{ "1" }
-	    range	{ 0 1 }
-	    export	none
-	}
-	parm {
 	    name	"import_otls"
 	    label	"Import OTLs"
 	    type	toggle
@@ -150,8 +142,17 @@
 	    export	none
 	}
 	parm {
-	    name	"discard_otl_pattern"
-	    label	"Discard OTL Pattern"
+	    name	"labelparm2"
+	    label	"Label"
+	    type	label
+	    nolabel
+	    default	{ "" }
+	    range	{ 0 1 }
+	    export	none
+	}
+	parm {
+	    name	"discard_specials"
+	    label	"Discard Special Variables"
 	    type	toggle
 	    default	{ "1" }
 	    range	{ 0 1 }
