@@ -9,8 +9,8 @@ def rescanOnLoaded(kwargs):
 
 
 def rescan(kwargs):
-    scan_env(kwargs)
-    update_parms(kwargs)
+    env = scan_env(kwargs)
+    update_parms(kwargs, env)
 
 
 def scan_env(kwargs):
@@ -32,6 +32,7 @@ def scan_env(kwargs):
     script_list = []
     while True:
         scripts = glob.glob(search_path + '/' + env_file_pattern)
+        scripts.reverse()
 
         for s in scripts:
             env_scripts[basename(s)] = dirname(s)
@@ -71,7 +72,7 @@ def scan_env(kwargs):
         if not k.isupper():
             del env[k]
 
-    hou.session.env_ql = env
+    return env
     
 
 def setEnvVar(n, vi):
@@ -156,9 +157,8 @@ def deleteVar(kwargs):
     n.parm("num_vars").set(nv - 1)
 
 
-def update_parms(kwargs):
+def update_parms(kwargs, env):
     node = kwargs["node"]
-    env = hou.session.env_ql
     
     old_num_vars = node.evalParm("num_vars")
 

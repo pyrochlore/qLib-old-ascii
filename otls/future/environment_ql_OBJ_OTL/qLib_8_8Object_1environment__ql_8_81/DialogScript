@@ -1,4 +1,4 @@
-# Dialog script for qLib::environment_ql::1 automatically generated 11/28/12 23:01:44
+# Dialog script for qLib::environment_ql::1 automatically generated 12/20/12 20:17:48
 
 {
     name	qLib::environment_ql::1
@@ -60,7 +60,7 @@
 
     group {
 	name	"folder1_1"
-	label	"Constants"
+	label	"Time"
 
 	parm {
 	    name	"fps"
@@ -112,14 +112,6 @@
 	parm {
 	    name	"apply_mappings"
 	    label	"Apply Mappings"
-	    type	toggle
-	    default	{ "1" }
-	    range	{ 0 1 }
-	    export	none
-	}
-	parm {
-	    name	"discard_mappings"
-	    label	"Discard Mappings Variable"
 	    type	toggle
 	    default	{ "1" }
 	    range	{ 0 1 }
