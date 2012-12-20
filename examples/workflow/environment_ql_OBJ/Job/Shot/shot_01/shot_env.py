@@ -2,4 +2,4 @@
 OTL_PATTERN = OTL_PATTERN + ":" + SHOT + "/Asset/*/Otl/*.otl"
 
 # Camera settings
-FOV=50
+FOV=75
